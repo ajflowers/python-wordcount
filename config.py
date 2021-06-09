@@ -1,4 +1,5 @@
 import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     DEBUG = False
@@ -17,3 +18,6 @@ class StagingConfig(Config):
 class DevelopmentConfig(Config):
     DEBUG = True
     DEVELOPMENT = True
+
+class TestingConfig(Config):
+    TESTING = True
